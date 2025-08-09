@@ -11,7 +11,8 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" as="style">
 
     <!-- Bootstrap и иконки -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- Пользовательские стили -->
@@ -31,7 +32,7 @@
 </button>
 
 <!-- Шапка -->
-<header class="bg-light py-3 border-bottom shadow-sm">
+<header class="bg-light py-3 shadow-sm">
     <div class="container text-center">
         <h1 class="mb-0 text-primary">Редактор скинов KolibriOS</h1>
         <p class="text-muted mt-2">Создавайте и редактируйте скины для KolibriOS</p>
@@ -39,12 +40,12 @@
 </header>
 
 <main class="flex-grow-1 row g-0">
-    <div class="container my-4 col-md-9">
+    <div class="container border py-4 col-md-9">
         <!-- Загрузка файла -->
-        <section class="text-center m-auto border rounded shadow p-3 bg-white upload-section" style="max-width:500px">
+        <section class="text-center m-auto border rounded shadow p-3 bg-white upload-section" style="max-width:550px">
             <h2 class="h5 mb-3">Загрузка скина</h2>
-            <p>Выберите файл <code>.skn</code> и нажмите <strong>Загрузить</strong>.</p>
-            
+            <p>Выберите файл <code>.skn</code> и нажмите <strong class="text-primary">Загрузить</strong>.</p>
+
             <div class="d-flex flex-column flex-md-row justify-content-center gap-2 mb-3">
                 <input type="file" class="form-control" id="file-input" accept=".skn"
                        aria-label="Выбор .skn файла" aria-describedby="file-help">
@@ -74,7 +75,7 @@
                         <div class="window mx-auto" data-status="active" role="img" aria-label="Пример активного окна">
                             <div class="panel">
                                 <div class="left"></div>
-                                <div class="title">Заголовок окна</div>
+                                <div class="title">Активное окно</div>
                                 <div class="button"></div>
                                 <div class="close"></div>
                                 <div class="min"></div>
@@ -95,10 +96,11 @@
                         <h3 class="h6 mb-0">Неактивное окно</h3>
                     </div>
                     <div class="card-body d-flex justify-content-center align-items-center p-2">
-                        <div class="window mx-auto" data-status="inactive" role="img" aria-label="Пример неактивного окна">
+                        <div class="window mx-auto" data-status="inactive" role="img"
+                             aria-label="Пример неактивного окна">
                             <div class="panel">
                                 <div class="left"></div>
-                                <div class="title">Заголовок окна</div>
+                                <div class="title">Неактивное окно</div>
                                 <div class="button"></div>
                                 <div class="close"></div>
                                 <div class="min"></div>
@@ -115,7 +117,7 @@
     </div>
 
     <!-- Панель свойств -->
-    <aside class="offcanvas-md offcanvas-end d-md-block bg-light border-start col-md-3"
+    <aside class="offcanvas-md offcanvas-end d-md-block bg-light col-md-3"
            tabindex="-1" id="offcanvasProperties">
         <div class="offcanvas-header d-md-none bg-light">
             <h2 class="h5 mb-0">Свойства скина</h2>
@@ -130,7 +132,8 @@
             <div class="mb-3 field-color d-none">
                 <label for="color-picker" class="form-label">Цвет</label>
                 <div class="input-group">
-                    <input type="color" class="form-control form-control-color" id="color-picker" value="#563d7c" required>
+                    <input type="color" class="form-control form-control-color" id="color-picker" value="#563d7c"
+                           required>
                     <input type="text" class="form-control" id="color-hex" placeholder="#RRGGBB"
                            pattern="^#([A-Fa-f0-9]{6})$" required>
                 </div>
@@ -147,7 +150,8 @@
                 <div class="accordion-item">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#activePanel">Активное окно</button>
+                                data-bs-target="#activePanel">Активное окно
+                        </button>
                     </h3>
                     <div id="activePanel" class="accordion-collapse collapse">
                         <div class="accordion-body" id="active"></div>
@@ -156,7 +160,8 @@
                 <div class="accordion-item">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#inactivePanel">Неактивное окно</button>
+                                data-bs-target="#inactivePanel">Неактивное окно
+                        </button>
                     </h3>
                     <div id="inactivePanel" class="accordion-collapse collapse">
                         <div class="accordion-body" id="inactive"></div>
@@ -165,7 +170,8 @@
                 <div class="accordion-item">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#dtpPanel">DTP</button>
+                                data-bs-target="#dtpPanel">DTP
+                        </button>
                     </h3>
                     <div id="dtpPanel" class="accordion-collapse collapse">
                         <div class="accordion-body" id="dtp"></div>
@@ -174,7 +180,8 @@
                 <div class="accordion-item">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#marginPanel">Отступы</button>
+                                data-bs-target="#marginPanel">Отступы
+                        </button>
                     </h3>
                     <div id="marginPanel" class="accordion-collapse collapse">
                         <div class="accordion-body" id="margin"></div>
@@ -183,7 +190,8 @@
                 <div class="accordion-item">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#closePanel">Кнопка «Закрыть»</button>
+                                data-bs-target="#closePanel">Кнопка «Закрыть»
+                        </button>
                     </h3>
                     <div id="closePanel" class="accordion-collapse collapse">
                         <div class="accordion-body" id="close"></div>
@@ -192,7 +200,8 @@
                 <div class="accordion-item">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#minPanel">Кнопка «Свернуть»</button>
+                                data-bs-target="#minPanel">Кнопка «Свернуть»
+                        </button>
                     </h3>
                     <div id="minPanel" class="accordion-collapse collapse">
                         <div class="accordion-body" id="min"></div>
@@ -204,7 +213,7 @@
 </main>
 
 <!-- Подвал -->
-<footer class="bg-light border-top py-3 mt-auto shadow-sm">
+<footer class="bg-light py-3 mt-auto shadow-sm">
     <div class="container text-center">
         <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
             <a href="//github.com/paulcodeman/skin/" target="_blank" class="text-decoration-none">
@@ -216,7 +225,7 @@
             </a>
         </div>
         <div class="mt-2 text-muted small">
-            &copy; <span id="current-year"></span> Редактор скинов KolibriOS
+            &copy; <span id="current-year">2025</span> Редактор скинов KolibriOS
         </div>
     </div>
 </footer>
@@ -232,7 +241,6 @@
 <script src="js/script.js"></script>
 
 <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
     document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
 </script>
 </body>
