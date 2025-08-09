@@ -1,0 +1,2 @@
+# skin
+Редактор скинов KolibriOS
